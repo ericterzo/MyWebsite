@@ -1,5 +1,16 @@
 // Keeps the header social icons the same colour as the menu links,
 // including when the header changes colour on scroll.
+// Also tells the stylesheet how tall the header is, so the home page
+// picture can sit behind it.
+(function () {
+  var header = document.querySelector('header');
+  function measure() {
+    if (header) document.documentElement.style.setProperty('--vo-header-h', header.offsetHeight + 'px');
+  }
+  measure();
+  window.addEventListener('load', measure);
+  window.addEventListener('resize', measure);
+})();
 (function () {
   var socials = document.querySelector('.vo-socials');
   if (!socials) return;
