@@ -1,0 +1,36 @@
+/* Custom additions on top of the imported site styles. */
+
+/* Social links in the header, between the logo and the menu. */
+.vo-socials {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-right: auto;
+  padding-left: 24px;
+}
+.vo-socials a {
+  display: block;
+  line-height: 0;
+  color: var(--vo-social-color, currentColor);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.vo-socials a:hover,
+.vo-socials a:focus-visible {
+  opacity: 0.75;
+  transform: translateY(-1px);
+}
+.vo-socials svg {
+  width: 32px;
+  height: 32px;
+}
+@media (max-width: 767px) {
+  .vo-socials {
+    gap: 8px;
+    padding-left: 0;
+    margin-right: 48px; /* keeps clear of the menu button */
+  }
+  .vo-socials svg {
+    width: 26px;
+    height: 26px;
+  }
+}
