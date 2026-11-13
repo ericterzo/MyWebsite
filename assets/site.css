@@ -198,3 +198,6 @@
 @media (prefers-reduced-motion: reduce) {
   .vo-game-card, .vo-game-card-media img, .vo-home .vo-button, .vo-socials a { transition: none; }
 }
+
+.vo-downloads { margin-top: 26px; }
+.vo-downloads .vo-button { margin-top: 0; }
